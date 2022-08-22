@@ -9,16 +9,32 @@ function getRandomHexColor() {
 }
 
 
-const button = document.querySelector(".change-color");
-const span = document.querySelector(".color");
-console.log(span);
+// const button = document.querySelector(".change-color");
+// const span = document.querySelector(".color");
+// console.log(span);
+
+// button.addEventListener("click", onClickButton);
+
+// function onClickButton() {
+//   console.log("click");
+//   console.log(getRandomHexColor());
+//   document.body.style.backgroundColor = getRandomHexColor();
+//   span.textContent = getRandomHexColor();
+// }
+
+const button = document.querySelector('.change-color');
+const span = document.querySelector('.color');
 
 button.addEventListener("click", onClickButton);
 
 function onClickButton() {
-  console.log("click");
-  console.log(getRandomHexColor());
-  document.body.style.backgroundColor = getRandomHexColor();
   span.textContent = getRandomHexColor();
+  document.body.setAttribute(
+    'style',
+    'background-color: ' + span.textContent,
+  );
 }
+
+
+
 
